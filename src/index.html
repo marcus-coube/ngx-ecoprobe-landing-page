@@ -72,6 +72,165 @@
 
   <meta http-equiv="Content-Language" content="pt-BR">
   <meta name="language" content="Portuguese">
+
+  <!-- Structured Data: LocalBusiness + VeterinaryCare -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "MedicalBusiness"],
+    "name": "Ecoprobe",
+    "description": "Serviço de ultrassonografia veterinária móvel em Curitiba e Região Metropolitana. Atendimento domiciliar e em clínicas parceiras com tecnologia de ponta.",
+    "url": "https://ecoprobe.com.br",
+    "logo": "https://ecoprobe.com.br/assets/logo_ecoprobe.png",
+    "image": "https://ecoprobe.com.br/assets/logo_ecoprobe.png",
+    "telephone": "+55-41-98719-1306",
+    "email": "ecoprobe.contato@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Curitiba",
+      "addressRegion": "PR",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -25.4484,
+      "longitude": -49.2880
+    },
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Região Metropolitana de Curitiba"
+    },
+    "sameAs": [
+      "https://www.instagram.com/ecoprobe/"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+55-41-98719-1306",
+      "contactType": "customer service",
+      "contactOption": "TollFree",
+      "availableLanguage": "Portuguese"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Serviços de Ultrassonografia Veterinária",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalProcedure",
+            "name": "Ultrassom Abdominal Veterinário",
+            "description": "Avaliação ultrassonográfica dos órgãos abdominais (fígado, rins, baço, bexiga, intestinos) em cães e gatos.",
+            "procedureType": "DiagnosticProcedure"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalProcedure",
+            "name": "Ultrassom Oftalmológico Veterinário",
+            "description": "Avaliação ultrassonográfica do globo ocular e estruturas anexas em cães e gatos.",
+            "procedureType": "DiagnosticProcedure"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalProcedure",
+            "name": "Ultrassom Gestacional Veterinário",
+            "description": "Confirmação de gestação, contagem de fetos e avaliação de viabilidade fetal em cães e gatos.",
+            "procedureType": "DiagnosticProcedure"
+          }
+        }
+      ]
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": { "@type": "Person", "name": "Lorraine Mayumi" },
+        "reviewBody": "Dra. Giovana é incrível! Atende os pets com muito amor, paciência e profissionalismo. Dá pra ver o quanto ela ama o que faz!"
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": { "@type": "Person", "name": "Vania Iarek" },
+        "reviewBody": "A Ecoprobe superou todas as minhas expectativas! O atendimento é impecável. A Giovana demonstrou um cuidado incrível com cada detalhe para que meu gato se sentisse completamente à vontade, utilizando aromaterapia, cromoterapia e até gel de contato aquecido."
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "3",
+      "bestRating": "5"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "O serviço de ultrassonografia veterinária da Ecoprobe atende cães e gatos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim, a Ecoprobe atende cães e gatos em todas as modalidades: ultrassom abdominal, oftalmológico e gestacional."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "É necessário jejum para o ultrassom abdominal veterinário?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim, recomenda-se jejum alimentar de 6 a 8 horas antes do exame para garantir melhor qualidade de imagem abdominal."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como funciona o atendimento domiciliar de ultrassom veterinário da Ecoprobe?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A Ecoprobe leva o equipamento de ultrassonografia diretamente à casa do tutor ou à clínica parceira, realizando o exame no local mais confortável para o animal."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como agendar um ultrassom veterinário com a Ecoprobe?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O agendamento é feito via WhatsApp pelo número (41) 98719-1306."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "A Ecoprobe faz parceria com clínicas veterinárias?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. A Ecoprobe oferece serviço terceirizado de ultrassonografia para clínicas veterinárias em Curitiba e Região Metropolitana."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Qual a área de atendimento da Ecoprobe?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A Ecoprobe atende toda a Região Metropolitana de Curitiba, Paraná, Brasil. Entre em contato para confirmar disponibilidade na sua localidade."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
