@@ -1,0 +1,231 @@
+@import 'tailwindcss';
+
+/* ------------------------------------------------------------------ */
+/* Design tokens — dark é o padrão; .light no <html> alterna o tema    */
+/* ------------------------------------------------------------------ */
+:root {
+  --bg: #0a0a0a;
+  --surface: #121212;
+  --raised: #1e1e1e;
+  --ink: #ffffff;
+  --muted: #b3b3b3;
+  --line: rgba(255, 255, 255, 0.08);
+  --primary: #ff6b00;
+  --accent: #ff8c32;
+  --glass: rgba(255, 255, 255, 0.04);
+  --glass-strong: rgba(255, 255, 255, 0.07);
+  --glow: rgba(255, 107, 0, 0.35);
+  --grid-dot: rgba(255, 255, 255, 0.055);
+}
+
+.light {
+  --bg: #faf8f5;
+  --surface: #ffffff;
+  --raised: #f3efe9;
+  --ink: #17120c;
+  --muted: #6b6257;
+  --line: rgba(23, 18, 12, 0.1);
+  --primary: #f05e00;
+  --accent: #ff6b00;
+  --glass: rgba(255, 255, 255, 0.65);
+  --glass-strong: rgba(255, 255, 255, 0.85);
+  --glow: rgba(255, 107, 0, 0.2);
+  --grid-dot: rgba(23, 18, 12, 0.07);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-raised: var(--raised);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-primary: var(--primary);
+  --color-accent: var(--accent);
+
+  --font-display: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* ------------------------------------------------------------------ */
+/* Utilitários de assinatura visual                                    */
+/* ------------------------------------------------------------------ */
+
+/* Cartão de vidro (glassmorphism leve) */
+.glass {
+  background: var(--glass);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.glass-strong {
+  background: var(--glass-strong);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+/* Vidro opaco para navegação fixa — legível sobre qualquer conteúdo */
+.glass-nav {
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+/* Microlabel estilo telemetria médica */
+.kicker {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.kicker::before {
+  content: '';
+  width: 1.6rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--primary));
+}
+
+/* Fundo de pontos estilo radar */
+.dot-grid {
+  background-image: radial-gradient(var(--grid-dot) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+/* Brilho laranja suave */
+.glow-primary {
+  box-shadow:
+    0 0 0 1px rgba(255, 107, 0, 0.25),
+    0 10px 40px -8px var(--glow);
+}
+
+/* Texto com gradiente laranja */
+.text-gradient {
+  background: linear-gradient(100deg, var(--primary), var(--accent) 60%, #ffc59a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ------------------------------------------------------------------ */
+/* Animações                                                           */
+/* ------------------------------------------------------------------ */
+
+/* Rola por 38s e segura 4s no fim do ciclo (-50% = lista repetida,
+   visual de "carrossel encerrado") antes de recomeçar. */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  90.5% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 42s linear infinite;
+}
+
+.marquee-paused:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+@keyframes sweep {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-sweep {
+  animation: sweep 6s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes ping-ring {
+  0% {
+    transform: scale(0.55);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+.animate-ping-ring {
+  animation: ping-ring 2.6s cubic-bezier(0.2, 0.6, 0.4, 1) infinite;
+}
+
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float-y 5.5s ease-in-out infinite;
+}
+
+@keyframes wave-dash {
+  to {
+    stroke-dashoffset: -640;
+  }
+}
+
+.animate-wave {
+  stroke-dasharray: 320 320;
+  animation: wave-dash 7s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-sweep,
+  .animate-ping-ring,
+  .animate-float,
+  .animate-wave {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}

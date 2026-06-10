@@ -1,59 +1,47 @@
-# EcoprobeLandingPage
+# Ecoprobe — Landing Page
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.8.
+Landing page da **Ecoprobe**, empresa especializada em ultrassom veterinário móvel em Curitiba e Região Metropolitana.
 
-## Development server
+## Stack
 
-To start a local development server, run:
+- [Next.js 15](https://nextjs.org/) (App Router, export estático)
+- TypeScript
+- Tailwind CSS v4
+- Framer Motion
+- Lucide Icons
 
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Desenvolvimento
 
 ```bash
-ng generate component component-name
+npm install
+npm run dev
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Abra [http://localhost:3000](http://localhost:3000).
+
+## Build e deploy
 
 ```bash
-ng generate --help
+npm run build
 ```
 
-## Building
+O build gera o site estático em `out/`, publicado no Firebase Hosting (`firebase.json` já aponta para `out`). O deploy acontece automaticamente via GitHub Actions no merge para `master`.
 
-To build the project run:
+## Estrutura
 
-```bash
-ng build
-```
+- `app/` — layout (SEO/metadata/JSON-LD) e página principal
+- `components/` — seções da landing page
+- `lib/data.ts` — todo o conteúdo editável (serviços, equipe, depoimentos, FAQ, clínicas parceiras)
+- `lib/site.ts` — constantes (link do WhatsApp, navegação, contatos)
+- `lib/seo.ts` — structured data (Schema.org LocalBusiness + FAQPage)
+- `public/` — favicon, robots.txt, sitemap.xml, llms.txt e assets
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Conteúdo
 
-## Running unit tests
+- **Logos de clínicas parceiras**: preencha `src` em `PARTNER_CLINICS` (`lib/data.ts`) com o caminho do logo real.
+- **Fotos da equipe**: preencha `photo` em `TEAM` (`lib/data.ts`).
+- **Imagens das seções**: os placeholders premium (`MediaFrame`) aceitam a prop `src` para fotos reais.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## SEO
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Meta tags, OpenGraph, Twitter Card, geo tags e structured data (LocalBusiness + FAQPage com SEO local para a Região Metropolitana) são gerados no build e ficam no HTML estático.

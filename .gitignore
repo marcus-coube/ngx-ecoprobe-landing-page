@@ -6,6 +6,15 @@
 /out-tsc
 /bazel-out
 
+# Next.js
+/.next
+/out
+next-env.d.ts
+
+# Legacy Angular (mantido apenas como referência local)
+/legacy-angular
+NUL
+
 # Node
 /node_modules
 npm-debug.log

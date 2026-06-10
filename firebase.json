@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/ecoprobe-landing-page/browser",
+    "public": "out",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {

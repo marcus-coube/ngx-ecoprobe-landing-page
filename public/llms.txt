@@ -8,13 +8,18 @@ A Ecoprobe é uma empresa especializada em diagnóstico por imagem veterinário 
 
 Nossa equipe utiliza equipamentos de última geração e técnicas complementares de conforto (aromaterapia, cromoterapia, gel de contato aquecido) para garantir um exame tranquilo e preciso.
 
-Responsável técnica: Dra. Giovana (médica-veterinária especialista em diagnóstico por imagem).
+Equipe: Dra. Giovana Rezende, Dra. Natalia Tratch e Dra. Marcela Vieira (médicas-veterinárias dedicadas ao diagnóstico por imagem).
 
 ## Serviços
 
-- **Ultrassom Abdominal (US Abdominal)**: Avaliação dos órgãos abdominais (fígado, rins, baço, bexiga, intestinos, etc.) para diagnóstico de alterações e doenças internas.
-- **Ultrassom Oftalmológico (US Oftalmológico)**: Avaliação estrutural do globo ocular e anexos, indicado para animais com opacidade ocular, suspeita de descolamento de retina ou corpo estranho.
-- **Ultrassom Gestacional (US Gestacional)**: Confirmação de gestação, contagem de fetos, avaliação de viabilidade fetal e estimativa do período gestacional em cães e gatos.
+- **Ultrassom Abdominal**: Avaliação dos órgãos abdominais (fígado, rins, baço, bexiga, intestinos, etc.) para diagnóstico de alterações e doenças internas.
+- **Ultrassom Gestacional**: Confirmação de gestação, avaliação de viabilidade fetal e estimativa do período gestacional em cães e gatos.
+- **Ultrassom Cervical**: Avaliação de estruturas da região cervical, como tireoide, linfonodos e glândulas salivares.
+- **Ultrassom Ocular**: Avaliação estrutural do globo ocular e anexos, indicado para animais com opacidade ocular, suspeita de descolamento de retina ou corpo estranho.
+- **AFAST**: Avaliação abdominal focada e rápida para detecção de líquido livre em situações de emergência.
+- **Citologia Ecoguiada**: Coleta de material para análise citológica guiada por imagem em tempo real.
+- **Cistocentese**: Coleta estéril de urina guiada por ultrassom para exames laboratoriais confiáveis.
+- **Abdominocentese**: Drenagem ou coleta de líquido abdominal guiada por imagem.
 
 ## Diferenciais
 
@@ -27,7 +32,7 @@ Responsável técnica: Dra. Giovana (médica-veterinária especialista em diagn�
 
 ## Área de Atendimento
 
-Curitiba e toda a Região Metropolitana de Curitiba, Paraná, Brasil.
+Curitiba e toda a Região Metropolitana de Curitiba, Paraná, Brasil — incluindo São José dos Pinhais, Colombo, Pinhais, Araucária, Campo Largo e Fazenda Rio Grande.
 
 ## Contato
 
