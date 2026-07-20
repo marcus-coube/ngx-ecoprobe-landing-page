@@ -17,11 +17,20 @@ export function MediaFrame({
 }) {
   return (
     <div
-      className={`relative overflow-hidden rounded-3xl border border-line bg-surface ${aspect} ${className}`}
+      className={`group relative overflow-hidden rounded-3xl border border-line bg-surface ${aspect} ${className}`}
     >
       {src ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img src={src} alt={alt ?? label} className="h-full w-full object-cover" loading="lazy" />
+        <>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={src}
+            alt={alt ?? label}
+            className="h-full w-full object-cover saturate-[.95] contrast-[1.03] transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+            loading="lazy"
+          />
+          {/* véu quente da marca — harmoniza as fotos com o tema */}
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary/15 via-transparent to-primary/10 mix-blend-soft-light" />
+        </>
       ) : (
         <div className="dot-grid absolute inset-0 flex flex-col items-center justify-center gap-5 p-8">
           {/* arte de sonar */}

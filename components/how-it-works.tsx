@@ -51,6 +51,7 @@ export function HowItWorks() {
         <Reveal>
           <MediaFrame
             label="Gato relaxado recebendo ultrassom em ambiente residencial confortável"
+            src="/assets/banners/cat-home.webp"
             aspect="aspect-[16/10]"
           />
         </Reveal>

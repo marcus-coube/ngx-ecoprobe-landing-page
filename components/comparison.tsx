@@ -61,7 +61,8 @@ export function Comparison() {
       <div className="mt-14 grid items-center gap-10 lg:grid-cols-2">
         <Reveal>
           <MediaFrame
-            label="Veterinária realizando ultrassom em um gato tranquilo dentro de casa"
+            label="Veterinária realizando ultrassom em um cão tranquilo, deitado no chão de casa"
+            src="/assets/banners/exam-on-the-floor.webp"
             aspect="aspect-[16/10]"
           />
         </Reveal>

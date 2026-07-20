@@ -14,7 +14,8 @@ export function About() {
       <div className="grid items-center gap-14 lg:grid-cols-2">
         <Reveal>
           <MediaFrame
-            label="Equipe Ecoprobe em atendimento com equipamento moderno"
+            label="Transdutor de ultrassom de última geração usado nos atendimentos Ecoprobe"
+            src="/assets/banners/equipment.webp"
             aspect="aspect-[4/3.4]"
           />
         </Reveal>

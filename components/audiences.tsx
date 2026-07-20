@@ -33,7 +33,8 @@ export function Audiences() {
           </Reveal>
           <Reveal delay={0.12}>
             <MediaFrame
-              label="Tutor acompanhando o exame ao lado do pet em casa"
+              label="Cão relaxado na almofada Ecoprobe durante o exame em casa"
+              src="/assets/banners/dog-home.webp"
               aspect="aspect-[4/3.2]"
             />
           </Reveal>
@@ -43,7 +44,8 @@ export function Audiences() {
         <div className="grid items-center gap-14 lg:grid-cols-2">
           <Reveal className="order-2 lg:order-1" delay={0.12}>
             <MediaFrame
-              label="Profissional realizando ultrassom em clínica veterinária parceira"
+              label="Profissional da Ecoprobe analisando material de citologia em clínica veterinária parceira"
+              src="/assets/banners/equipment-2.webp"
               aspect="aspect-[4/3.2]"
             />
           </Reveal>
