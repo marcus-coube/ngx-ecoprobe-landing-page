@@ -60,25 +60,28 @@ export function Hero() {
             equipamentos de última geração.
           </motion.p>
 
-          <motion.div variants={item} className="flex flex-wrap items-center gap-4">
-            <WaButton size="lg">Agendar pelo WhatsApp</WaButton>
+          <motion.div variants={item} className="flex items-center gap-2 sm:flex-wrap sm:gap-4">
+            <WaButton size="lg" className="flex-1 justify-center !px-5 !py-3 !text-sm sm:flex-none sm:!px-9 sm:!py-[1.125rem] sm:!text-base">
+              <span className="hidden sm:inline">Agendar pelo WhatsApp</span>
+              <span className="sm:hidden">Agendar</span>
+            </WaButton>
             <a
               href="#servicos"
-              className="glass group inline-flex items-center gap-2.5 rounded-full px-8 py-4 font-display text-base font-semibold text-ink transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/50 hover:text-primary"
+              className="glass group flex-1 inline-flex items-center justify-center gap-2 rounded-full px-4 py-3 sm:flex-none sm:gap-2.5 sm:px-8 sm:py-4 font-display text-sm font-semibold text-ink transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/50 hover:text-primary"
             >
-              Conhecer Serviços
+              <span className="hidden sm:inline">Conhecer </span>Serviços
               <ArrowDown className="size-4 transition-transform duration-300 group-hover:translate-y-0.5" />
             </a>
           </motion.div>
 
-          <motion.ul variants={item} className="mt-2 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap">
+          <motion.ul variants={item} className="mt-2 grid grid-cols-2 gap-2 sm:flex sm:flex-row sm:flex-wrap sm:gap-2.5">
             {BADGES.map(({ icon: Icon, label }) => (
               <li
                 key={label}
-                className="glass flex items-center gap-2.5 rounded-full px-4 py-2 text-sm text-muted"
+                className="glass flex items-start gap-2 rounded-2xl px-3 py-2.5 text-xs text-muted sm:items-center sm:rounded-full sm:gap-2.5 sm:px-4 sm:py-2 sm:text-sm"
               >
-                <Icon className="size-4 shrink-0 text-primary" aria-hidden />
-                {label}
+                <Icon className="mt-0.5 size-3.5 shrink-0 text-primary sm:mt-0 sm:size-4" aria-hidden />
+                <span>{label}</span>
               </li>
             ))}
           </motion.ul>
@@ -92,7 +95,7 @@ export function Hero() {
           className="relative mx-auto w-full max-w-md lg:max-w-none"
         >
           <div className="glass relative overflow-hidden rounded-[2rem] p-3">
-            <div className="dot-grid relative flex aspect-[4/4.4] items-center justify-center overflow-hidden rounded-3xl bg-surface sm:aspect-[4/4]">
+            <div className="dot-grid relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-3xl bg-surface sm:aspect-[4/4]">
               {/* sonar */}
               <div className="relative flex size-[72%] items-center justify-center">
                 <div className="absolute inset-0 rounded-full border border-primary/15" />
@@ -138,7 +141,7 @@ export function Hero() {
           </div>
 
           {/* chips flutuantes */}
-          <div className="animate-float glass-strong absolute -left-4 top-18 hidden items-center gap-2.5 rounded-2xl px-4 py-3 sm:flex">
+          <div className="animate-float glass-strong absolute -left-4 top-18 hidden items-center gap-2.5 rounded-2xl px-4 py-3 lg:flex">
             <span className="flex size-8 items-center justify-center rounded-full bg-primary/15 text-primary">
               <Award className="size-4" aria-hidden />
             </span>
@@ -148,7 +151,7 @@ export function Hero() {
             </div>
           </div>
           <div
-            className="animate-float glass-strong absolute -right-3 bottom-12 hidden items-center gap-2.5 rounded-2xl px-4 py-3 sm:flex"
+            className="animate-float glass-strong absolute -right-3 bottom-12 hidden items-center gap-2.5 rounded-2xl px-4 py-3 lg:flex"
             style={{ animationDelay: '1.6s' }}
           >
             <span className="flex size-8 items-center justify-center rounded-full bg-primary/15 text-primary">

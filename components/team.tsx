@@ -16,16 +16,22 @@ export function Team() {
         {TEAM.map((member, index) => (
           <Reveal key={member.name} delay={index * 0.1}>
             <article className="group glass relative overflow-hidden rounded-3xl transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/40">
-              {/* foto (placeholder até as fotos reais) */}
-              <div className="dot-grid relative flex aspect-[4/3.4] items-center justify-center bg-surface">
+              <div className="dot-grid relative flex aspect-[4/4.2] items-center justify-center overflow-hidden bg-surface">
                 {member.photo ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={member.photo}
-                    alt={`Foto de ${member.name}`}
-                    className="h-full w-full object-cover"
-                    loading="lazy"
-                  />
+                  <>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={member.photo}
+                      alt={`Foto de ${member.name}`}
+                      width={880}
+                      height={924}
+                      className="h-full w-full object-cover saturate-[.92] contrast-[1.04] transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+                      loading="lazy"
+                    />
+                    {/* véu quente da marca + fade inferior — integra a foto ao tema */}
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-primary/10 mix-blend-soft-light" />
+                    <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-bg/40 to-transparent" />
+                  </>
                 ) : (
                   <div className="relative flex size-24 items-center justify-center">
                     <div className="animate-ping-ring absolute inset-0 rounded-full border border-primary/30" />

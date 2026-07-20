@@ -262,16 +262,19 @@ export const TEAM: TeamMember[] = [
     name: 'Dra. Giovana Rezende',
     role: 'Médica-veterinária • Diagnóstico por imagem',
     bio: 'Descrição será adicionada posteriormente.',
+    photo: '/assets/team/giovana-rezende.webp',
   },
   {
     name: 'Dra. Natalia Tratch',
     role: 'Médica-veterinária • Diagnóstico por imagem',
     bio: 'Descrição será adicionada posteriormente.',
+    photo: '/assets/team/natalia-tratch.webp',
   },
   {
     name: 'Dra. Marcela Vieira',
     role: 'Médica-veterinária • Diagnóstico por imagem',
     bio: 'Descrição será adicionada posteriormente.',
+    photo: '/assets/team/marcela-vieira.webp',
   },
 ];
 

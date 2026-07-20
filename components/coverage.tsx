@@ -42,7 +42,7 @@ export function Coverage() {
         {/* mapa ilustrativo estilo radar */}
         <Reveal delay={0.12}>
           <div className="glass relative overflow-hidden rounded-[2rem] p-3">
-            <div className="dot-grid relative aspect-square overflow-hidden rounded-3xl bg-surface sm:aspect-[5/4]">
+            <div className="dot-grid relative aspect-[5/4] overflow-hidden rounded-3xl bg-surface">
               <div className="absolute inset-0 m-auto aspect-square w-[88%]">
                 <div className="absolute inset-0 rounded-full border border-primary/12" />
                 <div className="absolute inset-[16%] rounded-full border border-primary/18" />
@@ -77,7 +77,7 @@ export function Coverage() {
                         )}
                       </span>
                       <span
-                        className={`whitespace-nowrap rounded-full px-2 py-0.5 font-mono text-[0.58rem] uppercase tracking-[0.12em] ${
+                        className={`hidden whitespace-nowrap rounded-full px-2 py-0.5 font-mono text-[0.58rem] uppercase tracking-[0.12em] sm:block ${
                           isCenter ? 'glass-strong text-ink' : 'text-muted'
                         }`}
                       >

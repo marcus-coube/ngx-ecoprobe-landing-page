@@ -6,7 +6,7 @@ export function Stats() {
   return (
     <section className="relative mx-auto max-w-7xl px-4 py-10 sm:px-6">
       <Reveal>
-        <div className="glass grid gap-px overflow-hidden rounded-3xl sm:grid-cols-2 lg:grid-cols-4">
+        <div className="glass grid grid-cols-2 gap-px overflow-hidden rounded-3xl lg:grid-cols-4">
           {STATS.map((stat) => (
             <div
               key={stat.label}
