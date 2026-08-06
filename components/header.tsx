@@ -60,7 +60,7 @@ export function Header() {
           <div className="flex items-center gap-2.5">
             <ThemeToggle />
             <div className="hidden sm:block">
-              <WaButton>Agendar pelo WhatsApp</WaButton>
+              <WaButton origin="header">Agendar pelo WhatsApp</WaButton>
             </div>
             <button
               type="button"
@@ -95,7 +95,9 @@ export function Header() {
                 </a>
               ))}
               <div className="p-2 sm:hidden">
-                <WaButton className="w-full">Agendar pelo WhatsApp</WaButton>
+                <WaButton origin="header_mobile" className="w-full">
+                  Agendar pelo WhatsApp
+                </WaButton>
               </div>
             </motion.nav>
           )}

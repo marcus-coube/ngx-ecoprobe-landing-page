@@ -36,7 +36,9 @@ export function Coverage() {
               </li>
             ))}
           </ul>
-          <WaButton className="mt-2">Consultar minha região</WaButton>
+          <WaButton origin="cobertura" className="mt-2">
+            Consultar minha região
+          </WaButton>
         </Reveal>
 
         {/* mapa ilustrativo estilo radar */}
@@ -89,7 +91,7 @@ export function Coverage() {
               })}
               <p className="absolute bottom-4 left-5 flex items-center gap-1.5 font-mono text-[0.62rem] uppercase tracking-[0.2em] text-muted">
                 <MapPin className="size-3.5 text-primary" aria-hidden />
-                Mapa ilustrativo
+                Área de atendimento
               </p>
             </div>
           </div>

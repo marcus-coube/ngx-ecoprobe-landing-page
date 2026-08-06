@@ -1,14 +1,19 @@
+'use client';
+
 import { MessageCircle } from 'lucide-react';
 import type { ReactNode } from 'react';
+import { type CtaOrigin, trackWhatsappClick } from '@/lib/analytics';
 import { WHATSAPP_URL } from '@/lib/site';
 
 export function WaButton({
   children,
+  origin,
   variant = 'primary',
   size = 'md',
   className = '',
 }: {
   children: ReactNode;
+  origin: CtaOrigin;
   variant?: 'primary' | 'ghost';
   size?: 'md' | 'lg';
   className?: string;
@@ -31,6 +36,7 @@ export function WaButton({
       href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={() => trackWhatsappClick(origin)}
       className={`${base} ${sizes[size]} ${variants[variant]} ${className}`}
     >
       <MessageCircle

@@ -1,7 +1,8 @@
+import { GoogleAnalytics } from '@next/third-parties/google';
 import type { Metadata, Viewport } from 'next';
 import { IBM_Plex_Mono, Manrope, Sora } from 'next/font/google';
 import { FAQ_JSONLD, LOCAL_BUSINESS_JSONLD } from '@/lib/seo';
-import { SITE_URL } from '@/lib/site';
+import { GA_MEASUREMENT_ID, SITE_URL } from '@/lib/site';
 import './globals.css';
 
 const sora = Sora({
@@ -119,6 +120,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className={`${sora.variable} ${manrope.variable} ${plexMono.variable}`}>
         {children}
+        {GA_MEASUREMENT_ID && <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />}
       </body>
     </html>
   );

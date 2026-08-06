@@ -1,5 +1,12 @@
 export const SITE_URL = 'https://ecoprobe.com.br';
 
+/**
+ * Measurement ID do stream "ECOPROBE-LP" (GA4 vinculado ao projeto Firebase).
+ * Formato G-XXXXXXXXXX. Não é segredo: fica visível no HTML de qualquer site com GA.
+ * Deixar vazio desativa completamente o tracking.
+ */
+export const GA_MEASUREMENT_ID = '';
+
 export const WHATSAPP_URL =
   'https://api.whatsapp.com/send/?phone=41987191306&text&type=phone_number&app_absent=0';
 

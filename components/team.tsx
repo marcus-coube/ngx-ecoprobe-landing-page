@@ -15,7 +15,7 @@ export function Team() {
       <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {TEAM.map((member, index) => (
           <Reveal key={member.name} delay={index * 0.1}>
-            <article className="group glass relative overflow-hidden rounded-3xl transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/40">
+            <article className="group glass relative h-full overflow-hidden rounded-3xl transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/40">
               <div className="dot-grid relative flex aspect-[4/4.2] items-center justify-center overflow-hidden bg-surface">
                 {member.photo ? (
                   <>
@@ -47,7 +47,12 @@ export function Team() {
                 <p className="mt-1.5 font-mono text-[0.68rem] uppercase tracking-[0.16em] text-primary">
                   {member.role}
                 </p>
-                <p className="mt-3.5 text-sm leading-relaxed text-muted">{member.bio}</p>
+                <p className="mt-1.5 font-mono text-[0.65rem] uppercase tracking-[0.16em] text-muted/70">
+                  {member.crmv}
+                </p>
+                <p className="mt-3.5 whitespace-pre-line text-sm leading-relaxed text-muted">
+                  {member.bio}
+                </p>
               </div>
             </article>
           </Reveal>

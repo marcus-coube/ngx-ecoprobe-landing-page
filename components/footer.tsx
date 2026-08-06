@@ -1,8 +1,9 @@
 import { AtSign, Mail, MapPin } from 'lucide-react';
 import Image from 'next/image';
 import { CITIES } from '@/lib/data';
-import { EMAIL, INSTAGRAM_URL, NAV_LINKS, WHATSAPP_DISPLAY, WHATSAPP_URL } from '@/lib/site';
+import { EMAIL, INSTAGRAM_URL, NAV_LINKS, WHATSAPP_DISPLAY } from '@/lib/site';
 import { WaButton } from './ui/wa-button';
+import { WaLink } from './ui/wa-link';
 
 export function Footer() {
   return (
@@ -25,7 +26,7 @@ export function Footer() {
             Ultrassom Veterinário Móvel em Curitiba e Região Metropolitana. Diagnóstico por imagem
             de alto padrão, no conforto do lar ou em clínicas parceiras.
           </p>
-          <WaButton>Agendar pelo WhatsApp</WaButton>
+          <WaButton origin="rodape">Agendar pelo WhatsApp</WaButton>
         </div>
 
         <nav className="flex flex-col gap-3" aria-label="Links rápidos">
@@ -45,14 +46,12 @@ export function Footer() {
 
         <div className="flex flex-col gap-3">
           <h3 className="font-mono text-xs uppercase tracking-[0.22em] text-primary">Contato</h3>
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <WaLink
+            origin="rodape_contato"
             className="w-fit text-sm text-muted transition-colors hover:text-primary"
           >
             WhatsApp {WHATSAPP_DISPLAY}
-          </a>
+          </WaLink>
           <a
             href={`mailto:${EMAIL}`}
             className="flex w-fit items-center gap-2 text-sm text-muted transition-colors hover:text-primary"

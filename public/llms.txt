@@ -8,7 +8,11 @@ A Ecoprobe é uma empresa especializada em diagnóstico por imagem veterinário 
 
 Nossa equipe utiliza equipamentos de última geração e técnicas complementares de conforto (aromaterapia, cromoterapia, gel de contato aquecido) para garantir um exame tranquilo e preciso.
 
-Equipe: Dra. Giovana Rezende, Dra. Natalia Tratch e Dra. Marcela Vieira (médicas-veterinárias dedicadas ao diagnóstico por imagem).
+Equipe (médicas-veterinárias dedicadas ao diagnóstico por imagem):
+
+- **Dra. Giovana Rezende** (CRMV-PR 18378): graduada em Medicina Veterinária pela UNIMAR e pós-graduada em Diagnóstico por Imagem pela PUC-PR.
+- **Dra. Natalia Tratch** (CRMV-PR 27105): graduada em Medicina Veterinária pela Unicesumar.
+- **Dra. Marcela Vieira** (CRMV-PR 24730): graduada em Medicina Veterinária pela Universidade Positivo.
 
 ## Serviços
 

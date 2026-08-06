@@ -29,7 +29,9 @@ export function Audiences() {
                 </li>
               ))}
             </ul>
-            <WaButton className="mt-2">Agendar atendimento domiciliar</WaButton>
+            <WaButton origin="tutores" className="mt-2">
+              Agendar atendimento domiciliar
+            </WaButton>
           </Reveal>
           <Reveal delay={0.12}>
             <MediaFrame
@@ -69,7 +71,7 @@ export function Audiences() {
                 </li>
               ))}
             </ul>
-            <WaButton className="mt-2" variant="ghost">
+            <WaButton origin="clinicas" className="mt-2" variant="ghost">
               Falar sobre parceria no WhatsApp
             </WaButton>
           </Reveal>

@@ -1,4 +1,4 @@
-import { CITIES, FAQ, SERVICES, TESTIMONIALS } from './data';
+import { CITIES, FAQ, SERVICES, TEAM, TESTIMONIALS } from './data';
 import { EMAIL, INSTAGRAM_URL, SITE_URL } from './site';
 
 /* JSON-LD reaproveitado do index.html original (que já performava bem)
@@ -36,6 +36,24 @@ export const LOCAL_BUSINESS_JSONLD = {
     } as { '@type': string; name: string },
   ]),
   sameAs: [INSTAGRAM_URL],
+  employee: TEAM.map((member) => ({
+    '@type': 'Person',
+    name: member.name.replace(/^Dra?\.\s*/, ''),
+    honorificPrefix: 'Dra.',
+    jobTitle: 'Médica-veterinária',
+    description: member.bio.replace(/\s*\n\s*/g, ' '),
+    identifier: member.crmv,
+    ...(member.photo ? { image: `${SITE_URL}${member.photo}` } : {}),
+    hasCredential: {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'Registro profissional',
+      identifier: member.crmv,
+      recognizedBy: {
+        '@type': 'Organization',
+        name: 'Conselho Regional de Medicina Veterinária do Paraná',
+      },
+    },
+  })),
   contactPoint: {
     '@type': 'ContactPoint',
     telephone: '+55-41-98719-1306',

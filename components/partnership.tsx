@@ -38,7 +38,9 @@ export function Partnership() {
         </div>
 
         <Reveal delay={0.2} className="mt-12 flex justify-center">
-          <WaButton size="lg">Quero ser parceiro</WaButton>
+          <WaButton origin="parceria" size="lg">
+            Quero ser parceiro
+          </WaButton>
         </Reveal>
       </div>
     </section>

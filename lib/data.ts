@@ -253,6 +253,7 @@ export const PARTNER_CLINICS: PartnerClinic[] = [
 export type TeamMember = {
   name: string;
   role: string;
+  crmv: string;
   bio: string;
   photo?: string;
 };
@@ -260,20 +261,23 @@ export type TeamMember = {
 export const TEAM: TeamMember[] = [
   {
     name: 'Dra. Giovana Rezende',
-    role: 'Médica-veterinária • Diagnóstico por imagem',
-    bio: 'Descrição será adicionada posteriormente.',
+    role: 'Médica-veterinária • Responsável Técnica',
+    crmv: 'CRMV-PR 18378',
+    bio: 'Graduada em Medicina Veterinária pela UNIMAR.\nPós-graduada em Diagnóstico por Imagem PUC-PR.\nCapacitação Teórica e Prática em US Abdominal - NAUS.',
     photo: '/assets/team/giovana-rezende.webp',
   },
   {
     name: 'Dra. Natalia Tratch',
-    role: 'Médica-veterinária • Diagnóstico por imagem',
-    bio: 'Descrição será adicionada posteriormente.',
+    role: 'Médica-veterinária ',
+    crmv: 'CRMV-PR 27105',
+    bio: 'Graduada em Medicina Veterinária pela Unicesumar.',
     photo: '/assets/team/natalia-tratch.webp',
   },
   {
     name: 'Dra. Marcela Vieira',
-    role: 'Médica-veterinária • Diagnóstico por imagem',
-    bio: 'Descrição será adicionada posteriormente.',
+    role: 'Médica-veterinária',
+    crmv: 'CRMV-PR 24730',
+    bio: 'Graduada em Medicina Veterinária pela Universidade Positivo.',
     photo: '/assets/team/marcela-vieira.webp',
   },
 ];

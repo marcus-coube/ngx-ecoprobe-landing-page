@@ -61,7 +61,7 @@ export function Hero() {
           </motion.p>
 
           <motion.div variants={item} className="flex items-center gap-2 sm:flex-wrap sm:gap-4">
-            <WaButton size="lg" className="flex-1 justify-center !px-5 !py-3 !text-sm sm:flex-none sm:!px-9 sm:!py-[1.125rem] sm:!text-base">
+            <WaButton origin="hero" size="lg" className="flex-1 justify-center !px-5 !py-3 !text-sm sm:flex-none sm:!px-9 sm:!py-[1.125rem] sm:!text-base">
               <span className="hidden sm:inline">Agendar pelo WhatsApp</span>
               <span className="sm:hidden">Agendar</span>
             </WaButton>

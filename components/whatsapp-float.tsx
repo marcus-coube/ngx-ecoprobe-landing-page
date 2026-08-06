@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
+import { trackWhatsappClick } from '@/lib/analytics';
 import { WHATSAPP_URL } from '@/lib/site';
 
 export function WhatsappFloat() {
@@ -11,6 +12,7 @@ export function WhatsappFloat() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Agendar Ultrassom pelo WhatsApp — resposta rápida"
+      onClick={() => trackWhatsappClick('botao_flutuante')}
       initial={{ opacity: 0, y: 40, scale: 0.8 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ delay: 1.4, duration: 0.6, ease: [0.21, 0.6, 0.35, 1] }}

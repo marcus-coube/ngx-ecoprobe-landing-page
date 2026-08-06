@@ -22,7 +22,9 @@ export function FinalCta() {
             <p className="max-w-xl text-lg text-muted">
               Fale com nossa equipe agora mesmo pelo WhatsApp.
             </p>
-            <WaButton size="lg">Agendar Atendimento</WaButton>
+            <WaButton origin="cta_final" size="lg">
+              Agendar Atendimento
+            </WaButton>
             <p className="glass mt-2 inline-flex items-center gap-2.5 rounded-full border-primary/30 px-5 py-2.5 text-sm font-semibold">
               <PhoneOff className="size-4 text-primary" aria-hidden />
               NÃO ATENDEMOS LIGAÇÕES. Atendimento exclusivamente via WhatsApp.
