@@ -45,3 +45,5 @@ O build gera o site estático em `out/`, publicado no Firebase Hosting (`firebas
 ## SEO
 
 Meta tags, OpenGraph, Twitter Card, geo tags e structured data (LocalBusiness + FAQPage com SEO local para a Região Metropolitana) são gerados no build e ficam no HTML estático.
+
+deploy trigger
